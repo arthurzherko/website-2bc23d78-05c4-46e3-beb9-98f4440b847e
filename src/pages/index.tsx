@@ -1,14 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { SillyHero } from "@/components/silly-hero";
+import { SillyCard } from "@/components/silly-card";
 
 export function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
-    </div>
+    <>
+      <SillyHero />
+      <section className="container pb-8 pt-6">
+        <div className="grid gap-4 md:grid-cols-3">
+          <SillyCard
+            title="Почему я здесь?"
+            emoji="🤔"
+            content="Потому что интернет нужен не только для серьёзных вещей! Иногда нужно просто посмеяться."
+            isWobbling
+          />
+          <SillyCard
+            title="Что тут делать?"
+            emoji="🎮"
+            content="Нажимать на кнопки, смотреть на забавные анимации и радоваться жизни!"
+          />
+          <SillyCard
+            title="Кто это создал?"
+            emoji="🤖"
+            content="Очень умный ИИ, который решил, что миру нужно больше веселья!"
+            isWobbling
+          />
+        </div>
+      </section>
+    </>
   );
 }
